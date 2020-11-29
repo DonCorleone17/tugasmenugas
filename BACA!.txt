@@ -1,0 +1,10 @@
+ADMIN LOGIN PASS
+
+Email : rhomairama@gmail.com
+Password : rhomairama
+
+Email : rama@gmail.com
+Password : rama
+
+Client : http://localhost/tugasmenugas/
+Admin : http://localhost/tugasmenugas/admin/beranda
