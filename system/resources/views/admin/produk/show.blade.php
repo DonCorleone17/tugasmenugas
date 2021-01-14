@@ -14,13 +14,17 @@
 							<h3>{{$produk->nama_produk}}</h3>
 							<hr>
 							<p>
-							Rp.{{number_format($produk->harga)}} |
-							Stok : {{$produk->stok}} |
-							Berat : {{$produk->berat}} |
-							Seller : {{$produk->seller->username}}
+								Rp.{{number_format($produk->harga)}} |
+								Stok : {{$produk->stok}} |
+								Berat : {{$produk->berat}} gr |
+								Seller : {{$produk->seller->username}} |
+								Tanggal Produk : {{$produk->created_at->diffForHumans()}}
 							</p>
 							<p>
 								{!! nl2br($produk->deskripsi) !!}
+							</p>
+							<p>
+								<img style="width:40%" src="{{url("public/$produk->foto")}}" >
 							</p>
 						</tbody>
 					</table>

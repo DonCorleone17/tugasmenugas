@@ -2,22 +2,40 @@
 
 @section('content')
 <div class="container">
-	<div class="row">
-		<div class="col-md-12 mt-5">
+	<div class="row mt-5">
+	<div class="col-md-4">
+			<img src="{{url('asset', $produk->foto)}}" alt="" class="img-fluid"></img>					
+		<div class="card">
+			<div class="card-body">
+				<img style="width:100%" src="{{url("public/$produk->foto")}}" >
+			</div>
+		</div>
+	
+		</div>
+
+		<div class="col-md-8">
 			<div class="card">
 				<div class="card-header">
-					Tambah Data Produk
+					Ubah Data Produk
 				</div>
 				<div class="card-body">
-					<form action="{{url('admin/produk', $produk->id)}}" method="post">
+
+
+					<form action="{{url('admin/produk', $produk->id)}}" method="post" enctype="multipart/form-data">
 						@csrf
 						@method("PUT")
+						
+
 					<div class="form-group">
 						<label for="" class="control-label">Nama</label>
 						<input type="text" class="form-control" name="nama_produk" value="{{$produk->nama_produk}}">
 					</div>
 
 					<div class="row">
+						<div class="form-group">
+							<label for="" class="control-label">Foto</label>
+							<input type="file" name="foto" class="form-control" accept=".png">
+						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="" class="control-label">Harga</label>

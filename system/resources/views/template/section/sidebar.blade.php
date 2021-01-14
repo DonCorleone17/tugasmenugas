@@ -21,7 +21,7 @@ function checkrouteactive($route){
           <img src="{{url('public')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="{{url('template')}}" class="d-block">Rizky Orama</a>
+          <a href="{{url('admin/user')}}" class="d-block">Akun Anda</a>
         </div>
       </div>
 

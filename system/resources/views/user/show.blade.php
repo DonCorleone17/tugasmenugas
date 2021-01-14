@@ -13,11 +13,12 @@
 						<tbody>
 							<h3>{{$user->nama_user}}</h3>
 							<hr>
-							<p>Username : {{$user->username}} |
+							<p> Username : {{$user->username}} |
+								Jenis Kelamin : {{$user->jenis_kelamin_string}} |
 								Email : {{$user->email}}
 							</p>
 							<p>
-								no handphone : {{$user->detail->no_handphone}}
+								No. Handphone : {{$user->detail->no_handphone}}
 							</p>
 						</tbody>
 					</table>

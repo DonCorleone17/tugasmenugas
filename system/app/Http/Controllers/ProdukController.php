@@ -3,21 +3,25 @@
 namespace App\Http\Controllers;
 use App\Models\Produk;
 use App\Models\Kategori;
-//use App\Models\UserDetail;
+use App\Models\User;
 
 class ProdukController extends Controller
 {
 	function index(){
 		$user = request()->user();
-		$data['list_produk'] = $user->produk;
+		$data['list_produk'] = Produk::all();
+		// $data['list_kategori'] = Kategori::all();
 		return view('admin.produk.index', $data);
 	}
 
 	function create(){
+		$data['list_kategori'] = Kategori::all();
 		return view('admin.produk.create');
 	}
 
 	function store(){
+
+		// dd(request()->all());
 		$produk = new Produk;
 		$produk->id_user = request()->user()->id;
 		$produk->nama_produk = request('nama_produk');
@@ -27,8 +31,10 @@ class ProdukController extends Controller
 		$produk->stok = request('stok');
 		$produk->save();
 
+		$produk->handleUploadFoto();
+
 		return redirect('admin/produk')->with('success','Data Berhasil Ditambahkan');
-		// dd(request()->all());
+
 	}
 
 	function show(Produk $produk){
@@ -47,12 +53,16 @@ class ProdukController extends Controller
 		$produk->berat = request('berat');
 		$produk->deskripsi = request('deskripsi');
 		$produk->stok = request('stok');
+		$produk->handleUploadFoto(); 
 		$produk->save();
+
+		$produk->handleUploadFoto();
 
 		return redirect('admin/produk')->with('success','Data Berhasil Diubah');
 	}
 
 	function destroy(Produk $produk){
+		// $produk->handleDelete();
 		$produk->delete();
 		return redirect('admin/produk')->with('danger','Data Berhasil Dihapus');
 	}

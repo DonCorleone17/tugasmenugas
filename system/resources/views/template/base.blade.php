@@ -15,8 +15,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{url('public')}}/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{url('public')}}/dist/css/adminlte.min.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet"> -->
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  @stack('style')
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -62,9 +65,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- jQuery -->
 <script src="{{url('public')}}/plugins/jquery/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="{{url('public')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="{{url('public')}}/dist/js/adminlte.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> -->
+@stack('script')
+<script>
+  $(".table-datatable").DataTable();
+  $(document).ready(function() {
+    $('#deskripsi').summernote();
+  });
+  </script>
+</script>
+
 </body>
 </html>

@@ -15,6 +15,7 @@
 							<th>No</th>
 							<th>Aksi</th>
 							<th>Nama</th>
+							<th>Jenis Kelamin</th>
 							<th>username</th>
 							<th>email</th>
 						</thead>
@@ -30,6 +31,7 @@
 								</div>
 							</td>
 							<td>{{$user->nama_user}}</td>
+							<td>{{$user->jenis_kelamin_string}}
 							<td>{{$user->username}}</td>
 							<td>{{$user->email}}</td>
 						 </tr>
