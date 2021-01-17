@@ -64,3 +64,5 @@ Route::get('test-collection', [HomeController::class, 'testCollection']);
 
 //Route::get('login', [HomeController::class, 'showLogin']);
 
+// wilayah - ajax
+Route::get('test-ajax', [HomeController:: class, 'testAjax']);
