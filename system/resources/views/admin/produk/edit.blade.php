@@ -34,7 +34,7 @@
 					<div class="row">
 						<div class="form-group">
 							<label for="" class="control-label">Foto</label>
-							<input type="file" name="foto" class="form-control" accept=".png">
+							<input type="file" name="foto" class="form-control" accept="image/*">
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
@@ -68,3 +68,16 @@
 	</div>
 </div>
 @endsection
+
+@push('style')
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+@endpush
+
+@push('script')
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+	<script>
+		$(document).ready(function() {
+ 		 $('#deskripsi').summernote();
+		});
+	</script>
+@endpush

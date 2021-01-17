@@ -60,5 +60,7 @@ Route::get('logout', function () {
     return view('admin.login');
 });
 
+Route::get('test-collection', [HomeController::class, 'testCollection']);
+
 //Route::get('login', [HomeController::class, 'showLogin']);
 

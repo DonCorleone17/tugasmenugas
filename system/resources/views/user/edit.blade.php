@@ -23,6 +23,11 @@
 					</div>
 
 					<div class="form-group">
+						<label for="" class="control-label">Jenis Kelamin </label>
+						<input type="text" name="jenis_kelamin" class="form-control">
+					</div>
+
+					<div class="form-group">
 						<label for="" class="control-label">Email </label>
 						<input type="text" name="email" class="form-control" value="{{$user->email}}">
 					</div>

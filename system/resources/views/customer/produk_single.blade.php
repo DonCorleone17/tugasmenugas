@@ -17,13 +17,7 @@
                   </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100" src="{!! asset('assets/images/kkaif.jpg')!!}" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="{!! asset('assets/images/gini.jpg')!!}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="{!! asset('assets/images/ariel_winter.jpg')!!}" alt="Third slide">
+                      <img class="d-block w-100" src="{{url("public/$produk->foto")}}" alt="First slide">
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -46,10 +40,10 @@
                       <h3>{{$produk->nama_produk}}</h3>
                     </div>
                     
-                    <label>stok : {{$produk->stok}} | berat : {{$produk->berat}} | Seller : {{$produk->seller->username}}</label>
+                    <label>Stok : {{$produk->stok}} | Berat : {{$produk->berat}} | Seller : {{$produk->seller->username}}</label>
                     <div class="row">
                       <div class="col-md-6">
-                        <label>harga</label><br>
+                        <label>Harga</label><br>
                         Rp. {{number_format($produk->harga)}}
                       </div>
                     </div>

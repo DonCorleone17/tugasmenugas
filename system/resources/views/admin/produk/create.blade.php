@@ -17,7 +17,7 @@
 					</div>
 					<div class="form-group">
 						<label for="" class="control-label">Foto</label>
-						<input type="file" name="foto" class="form-control" accept=".png">
+						<input type="file" name="foto" class="form-control" accept="image/*">
 					</div>
 					<div class="row">
 						<div class="col-md-6">

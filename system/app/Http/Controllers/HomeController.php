@@ -33,7 +33,31 @@ class HomeController extends Controller{
 	}
 
 
+	public function testCollection()
+	{
+		$list_bike = ['Arri', 'Panasonic', 'Nikon', 'Canon', 'Sony'];
+		$list_bike = collect($list_bike);
+		$list_produk = Produk::all();
 
+		// Sorting
+		// Sort By Harga Terendah
+		// dd($list_-produk->sortBy('harga'));
+		// Sort By Harga Tertinggi
+		// dd($list_produk->sortByDesc('harga'));
+		// $data['list'] = $list_produk;
+		// return view('test-collection', $data);
+		 //map
+
+		// $map = $list_produk->map(function($item){
+		// 	$item->stok = $item->stok+10;
+		// 	return $item;
+		// });	
+
+		$data['list'] = Produk::simplePaginate(15);		
+		return view('test-collection', $data);
+	
+		dd($list_bike, $list_produk);
+	}
 
 
 }

@@ -5,7 +5,7 @@
                         @foreach($list_produk as $data)
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="product">
-                        <a href="{{url('produk_single', $data->id)}}" class="img-prod"><img class="img-fluid" src="{{asset('public')}}/images/gini.jpg" alt="Colorlib Template">
+                        <a href="{{url('produk_single', $data->id)}}" class="img-prod"><img class="img-fluid" src="{{url("public/$data->foto")}}" alt="Colorlib Template">
                             
                             <div class="overlay"></div>
                         </a>
