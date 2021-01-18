@@ -18,6 +18,8 @@ use App\Http\Controllers\KategoriController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('beranda/{status}', [HomeController::class, 'showBeranda']);
 //->middleware('auth')
 Route::prefix('admin')->group(function(){
 			Route::post('produk/filter', [ProdukController::class, 'filter']);
